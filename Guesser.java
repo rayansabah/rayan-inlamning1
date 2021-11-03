@@ -68,7 +68,8 @@ public class Guesser{
     Scanner scanner = new Scanner(System.in);
     reply = scanner.nextLine();
     while(!(reply.equals("T") || reply.equals("F"))){
-      System.out.println("Error! Please anwser T or F");
+     ///// System.out.println("Error! /n");
+       System.out.println("Please anwser T or F");
       reply = scanner.nextLine();
     }
     // As long as it is not a valid reply (one of "T" and "F")
