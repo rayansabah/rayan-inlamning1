@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.util.Scanner;
 
 /**
  * Assignment 1 - Guessing Game
@@ -11,9 +12,6 @@ public class Guesser{
   private int low;
   private int high;
 
-  if (low > high){
-    throw new IllegalArgumentException("The first parameter must be lower than the second parameter")
-}
   /*
    * Task 1. Write code here for a constructor
    * which takes two int arguments and saves
@@ -26,6 +24,11 @@ public class Guesser{
    */
   
   // Write the constructor below this line.
+  public Guesser(int low, int high){
+    this.high = high;
+    this.low = low;
+  }
+  
 
 
   /*
@@ -34,8 +37,9 @@ public class Guesser{
    * rules() method, next the doGuesses() method.
    */
   public void start(){
-    doGuesses();
     rules();
+    doGuesses();
+    getReply();
     // call the rules method here
     // call the doGuesses() method here
   }
@@ -60,15 +64,13 @@ public class Guesser{
    */
   private String getReply(){
     String reply = null;
-    Scanner reader = new Scanner(System.in);
-    reply = reader.nextLine();
-    if (reply.equals("T") || reply.equals("F")){
-    } else{
-      System.out.println ("Error! Please answer T or F!");
-      return getReply();
-      return reply;
-    }
     // Write code here which reads a String from the console.
+    Scanner scanner = new Scanner(System.in);
+    reply = scanner.nextLine();
+    while(!(reply.equals("T") || reply.equals("F"))){
+      System.out.println("Error! Please anwser T or F");
+      reply = scanner.nextLine();
+    }
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
