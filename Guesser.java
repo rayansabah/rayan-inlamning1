@@ -68,7 +68,7 @@ public class Guesser{
     Scanner scanner = new Scanner(System.in);
     reply = scanner.nextLine();
     while(!(reply.equals("T") || reply.equals("F"))){
-     ///// System.out.println("Error! /n");
+      system.out.println("Wrong");
        System.out.println("Please anwser T or F");
       reply = scanner.nextLine();
     }
