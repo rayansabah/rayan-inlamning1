@@ -1,5 +1,3 @@
 #! / bin / bash
-printstr () (
-eko "rayan"
-}
-tryckstr
+$echo "rayan"
+echo "rayan"
