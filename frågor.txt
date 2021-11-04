@@ -18,7 +18,7 @@ git status: vad man har gjort med filerna till exempel tar bort eller lägger ti
 4. Hur kan man formulera sig i sina commit-meddelanden?
 Spara filen, lägg till den i repot, committa, pusha.
 
-Svar: Man använder git commit -m “-----------” i - så ska det stå vad det är man har gjort med filen som är nytt och det ska vara helst något viktigt så man har alla till exempel att man har laggt till filen till git hub ( adding NAME.txt) och det hjälper dig att hitta gamla versionen.
+Svar: Man använder git commit -m “-----------” i (-) så ska det stå vad det är man har gjort med filen som är nytt och det ska vara helst något viktigt så man har alla till exempel att man har laggt till filen till git hub ( adding NAME.txt) och det hjälper dig att hitta gamla versionen.
 
 5. Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra 
 
