@@ -1,1 +1,36 @@
-hej
+1. När använder man add respektive commit?
+Svar :
+först så kör man “git add” för att lägga filen i staging area för att den ska fortsätta så måste man köra “git commit” och det är där man skriver vad man har gjort med filen som är nytt.
+
+2. Vad är pull respektive push?
+Svar:
+Pull: är för att  använder man för att hämta uppdateringar från repository till exempel om någon av teamet har gjort något uppdatering så kan jag hämta alla uppdateringar som har gjort 
+
+Push: är ett kommando som är skickar in filer till github men det efter kommandot git add och git commit.  
+
+	
+3. När använder man log respektive status?
+Svar:
+git log: visar alla commits man har gjort genom tiderna i just den repository med den senaste längst uppe och har vem som har gjort det, när det är gjort.
+
+git status: vad man har gjort med filerna till exempel tar bort eller lägger till och modifieringar i filerna. För att även kolla så allt är rätt på sitt sätt efter något kommando till exempel git add och git commit 
+
+4. Hur kan man formulera sig i sina commit-meddelanden?
+Spara filen, lägg till den i repot, committa, pusha.
+
+Svar: Man använder git commit -m “-----------” i - så ska det stå vad det är man har gjort med filen som är nytt och det ska vara helst något viktigt så man har alla till exempel att man har laggt till filen till git hub ( adding NAME.txt) och det hjälper dig att hitta gamla versionen.
+
+5. Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra 
+
+Svar: Det finns två sätt den första är git checkout och git checkout HEAD
+Git checkout: man måste ha en kod som man kan hitta i git log (51f1b945a77303c980e7d20d5f4c8a3f618bcbc8) och det är från en av commiten som har gjort förr vilket är en gammal version av just den filen och till sist så skriver man namnet på filen vilket man vill ha den gamla versionen 
+
+Hur man kör kommandot : git checkout 9ad202d538c6ee6448e2c1ecc080c292cc761771^ frågor.txt
+
+git checkout Head: HEAD hänvisar till den aktuella versionen av arkivet vi tittar på. I det här fallet tittar vi på mastergrenen
+
+Hur man kör kommandot: git checkout HEAD frågor.txt
+
+
+Jag hade valt att använda Git checkout för att jag kan välja vilken tid och dag jag vill ha tillbaka just den filen för att om jag använder git checkout Head så är det den senaste bara så man kan inte välja vilken ändring man vill få tillbaka.
+
