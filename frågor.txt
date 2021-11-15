@@ -22,15 +22,18 @@ Svar: Man använder git commit -m “-----------” i (-) så ska det stå vad d
 
 5. Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra 
 
-Svar: Det finns två sätt den första är git checkout och git checkout HEAD
-Git checkout: man måste ha en kod som man kan hitta i git log (51f1b945a77303c980e7d20d5f4c8a3f618bcbc8) och det är från en av commiten som har gjort förr vilket är en gammal version av just den filen och till sist så skriver man namnet på filen vilket man vill ha den gamla versionen 
+git checkout 
+kommando används för att radera en ändring i working directory eller för att byta grenar
 
-Hur man kör kommandot : git checkout 9ad202d538c6ee6448e2c1ecc080c292cc761771^ frågor.txt
+exempel
+branch :  git checkout stage
+commit: git checkout 62ff517cc7c358eaf0bffdebbbe1b38dea92ba0f
 
-git checkout Head: HEAD hänvisar till den aktuella versionen av arkivet vi tittar på. I det här fallet tittar vi på mastergrenen
+git reset 
+kommando används för backa till ett viss commit men raderar commitsen i där i mellan. man kan backa filen från staging area still working directory. men den är inte så bra om man vill behålla sina commits i history.  
+exempel: git reset --mixed a560612
 
-Hur man kör kommandot: git checkout HEAD frågor.txt
-
-
-Jag hade valt att använda Git checkout för att jag kan välja vilken tid och dag jag vill ha tillbaka just den filen för att om jag använder git checkout Head så är det den senaste bara så man kan inte välja vilken ändring man vill få tillbaka.
+git revert
+detta kommando är bra för att backa till en viss commit utan att radera något commits alls från history.
+example: git revert 62ff517cc7c358eaf0bffdebbbe1b38dea92ba0f
 
